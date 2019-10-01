@@ -35,3 +35,5 @@ function logCompare(c: Compare): void {
 // Works!  WTF?
 logCompare(15);
 // :>>
+
+// this is because enums are number-based, unless initialized as strings.
