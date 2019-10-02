@@ -26,6 +26,10 @@ wss.broadcast = function broadcast(data) {
 };
 
 wss.on("connection", ws => {
+  console.log('server received new connection')
+  ws.on('close', () => {
+    console.log('this connection closed')
+  })
   ws.on("message", message => {
     console.log("ws received: %s", message);
 
